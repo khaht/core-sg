@@ -3,9 +3,12 @@
 
 name: Publish Package
 
-on:
-  release:
-    types: [created]
+# on:
+#   release:
+#     types: [created]
+on: 
+  push:
+    branches: [master]
 
 jobs:
   build:
@@ -29,8 +32,9 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm install
       - run: npm publish --access public
+      - run: echo "Hello $secrets.NPM_TOKEN, $secrets.GITHUB_TOKEN"
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   publish-gpr:
     needs: build
