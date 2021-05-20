@@ -1,0 +1,5 @@
+cefaa3ad9ae730c8594a401cba062aed
+require('dotenv').config({
+  path: 'test.env'
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImplc3Quc2V0dXAuanMiXSwibmFtZXMiOlsicmVxdWlyZSIsImNvbmZpZyIsInBhdGgiXSwibWFwcGluZ3MiOiJBQUFBQSxPQUFPLENBQUMsUUFBRCxDQUFQLENBQWtCQyxNQUFsQixDQUF5QjtBQUFFQyxFQUFBQSxJQUFJLEVBQUU7QUFBUixDQUF6QiIsInNvdXJjZXNDb250ZW50IjpbInJlcXVpcmUoJ2RvdGVudicpLmNvbmZpZyh7IHBhdGg6ICd0ZXN0LmVudicgfSk7XG4iXX0=

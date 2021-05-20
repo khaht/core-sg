@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["createDatabaseManager","require","module","exports"],"mappings":"AAAA,MAAM;AAAEA,EAAAA;AAAF,IAA4BC,OAAO,CAAC,oBAAD,CAAzC;;AAEAC,MAAM,CAACC,OAAP,GAAiB;AACfH,EAAAA;AADe,CAAjB","sourcesContent":["const { createDatabaseManager } = require('./database-manager');\n\nmodule.exports = {\n  createDatabaseManager,\n};\n"]}

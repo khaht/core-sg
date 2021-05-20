@@ -1,0 +1,22 @@
+5968505dd8d131664fcb9eb85c4cfe77
+const filepathToPropPath = require('../filepath-to-prop-path');
+
+describe('Filepath To Prop Path', () => {
+  test('Should returns a path (as an array) from a file path with useFileNameAsKey=true', async () => {
+    const resp = filepathToPropPath('home/controllers/home.js');
+    expect(resp).toEqual(['home', 'controllers', 'home']);
+  });
+  test('Should returns a path (as an array) from a file path with useFileNameAsKey=true and filePath startsWith "./"', async () => {
+    const resp = filepathToPropPath('./home/controllers/home.js');
+    expect(resp).toEqual(['home', 'controllers', 'home']);
+  });
+  test('Should returns a path (as an array) from a file path with useFileNameAsKey=false', async () => {
+    const resp = filepathToPropPath('home/config/routes.json', false);
+    expect(resp).toEqual(['home', 'config']);
+  });
+  test('should return list of paths', () => {
+    const resp = filepathToPropPath('home/config/routes.json');
+    expect(resp).toEqual(['home', 'config', 'routes']);
+  });
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZpbGVwYXRoLXRvLXByb3AtcGF0aC50ZXN0LmpzIl0sIm5hbWVzIjpbImZpbGVwYXRoVG9Qcm9wUGF0aCIsInJlcXVpcmUiLCJkZXNjcmliZSIsInRlc3QiLCJyZXNwIiwiZXhwZWN0IiwidG9FcXVhbCJdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTUEsa0JBQWtCLEdBQUdDLE9BQU8sQ0FBQywwQkFBRCxDQUFsQzs7QUFFQUMsUUFBUSxDQUFDLHVCQUFELEVBQTBCLE1BQU07QUFDdENDLEVBQUFBLElBQUksQ0FBQyxpRkFBRCxFQUFvRixZQUFZO0FBQ2xHLFVBQU1DLElBQUksR0FBR0osa0JBQWtCLENBQUMsMEJBQUQsQ0FBL0I7QUFDQUssSUFBQUEsTUFBTSxDQUFDRCxJQUFELENBQU4sQ0FBYUUsT0FBYixDQUFxQixDQUFDLE1BQUQsRUFBUyxhQUFULEVBQXdCLE1BQXhCLENBQXJCO0FBQ0QsR0FIRyxDQUFKO0FBS0FILEVBQUFBLElBQUksQ0FBQyw4R0FBRCxFQUFpSCxZQUFZO0FBQy9ILFVBQU1DLElBQUksR0FBR0osa0JBQWtCLENBQUMsNEJBQUQsQ0FBL0I7QUFDQUssSUFBQUEsTUFBTSxDQUFDRCxJQUFELENBQU4sQ0FBYUUsT0FBYixDQUFxQixDQUFDLE1BQUQsRUFBUyxhQUFULEVBQXdCLE1BQXhCLENBQXJCO0FBQ0QsR0FIRyxDQUFKO0FBS0FILEVBQUFBLElBQUksQ0FBQyxrRkFBRCxFQUFxRixZQUFZO0FBQ25HLFVBQU1DLElBQUksR0FBR0osa0JBQWtCLENBQUMseUJBQUQsRUFBNEIsS0FBNUIsQ0FBL0I7QUFDQUssSUFBQUEsTUFBTSxDQUFDRCxJQUFELENBQU4sQ0FBYUUsT0FBYixDQUFxQixDQUFDLE1BQUQsRUFBUyxRQUFULENBQXJCO0FBQ0QsR0FIRyxDQUFKO0FBS0FILEVBQUFBLElBQUksQ0FBQyw2QkFBRCxFQUFnQyxNQUFNO0FBQ3hDLFVBQU1DLElBQUksR0FBR0osa0JBQWtCLENBQUMseUJBQUQsQ0FBL0I7QUFDQUssSUFBQUEsTUFBTSxDQUFDRCxJQUFELENBQU4sQ0FBYUUsT0FBYixDQUFxQixDQUFDLE1BQUQsRUFBUyxRQUFULEVBQW1CLFFBQW5CLENBQXJCO0FBQ0QsR0FIRyxDQUFKO0FBSUQsQ0FwQk8sQ0FBUiIsInNvdXJjZXNDb250ZW50IjpbImNvbnN0IGZpbGVwYXRoVG9Qcm9wUGF0aCA9IHJlcXVpcmUoJy4uL2ZpbGVwYXRoLXRvLXByb3AtcGF0aCcpO1xuXG5kZXNjcmliZSgnRmlsZXBhdGggVG8gUHJvcCBQYXRoJywgKCkgPT4ge1xuICB0ZXN0KCdTaG91bGQgcmV0dXJucyBhIHBhdGggKGFzIGFuIGFycmF5KSBmcm9tIGEgZmlsZSBwYXRoIHdpdGggdXNlRmlsZU5hbWVBc0tleT10cnVlJywgYXN5bmMgKCkgPT4ge1xuICAgIGNvbnN0IHJlc3AgPSBmaWxlcGF0aFRvUHJvcFBhdGgoJ2hvbWUvY29udHJvbGxlcnMvaG9tZS5qcycpO1xuICAgIGV4cGVjdChyZXNwKS50b0VxdWFsKFsnaG9tZScsICdjb250cm9sbGVycycsICdob21lJ10pO1xuICB9KTtcblxuICB0ZXN0KCdTaG91bGQgcmV0dXJucyBhIHBhdGggKGFzIGFuIGFycmF5KSBmcm9tIGEgZmlsZSBwYXRoIHdpdGggdXNlRmlsZU5hbWVBc0tleT10cnVlIGFuZCBmaWxlUGF0aCBzdGFydHNXaXRoIFwiLi9cIicsIGFzeW5jICgpID0+IHtcbiAgICBjb25zdCByZXNwID0gZmlsZXBhdGhUb1Byb3BQYXRoKCcuL2hvbWUvY29udHJvbGxlcnMvaG9tZS5qcycpO1xuICAgIGV4cGVjdChyZXNwKS50b0VxdWFsKFsnaG9tZScsICdjb250cm9sbGVycycsICdob21lJ10pO1xuICB9KTtcblxuICB0ZXN0KCdTaG91bGQgcmV0dXJucyBhIHBhdGggKGFzIGFuIGFycmF5KSBmcm9tIGEgZmlsZSBwYXRoIHdpdGggdXNlRmlsZU5hbWVBc0tleT1mYWxzZScsIGFzeW5jICgpID0+IHtcbiAgICBjb25zdCByZXNwID0gZmlsZXBhdGhUb1Byb3BQYXRoKCdob21lL2NvbmZpZy9yb3V0ZXMuanNvbicsIGZhbHNlKTtcbiAgICBleHBlY3QocmVzcCkudG9FcXVhbChbJ2hvbWUnLCAnY29uZmlnJ10pO1xuICB9KTtcblxuICB0ZXN0KCdzaG91bGQgcmV0dXJuIGxpc3Qgb2YgcGF0aHMnLCAoKSA9PiB7XG4gICAgY29uc3QgcmVzcCA9IGZpbGVwYXRoVG9Qcm9wUGF0aCgnaG9tZS9jb25maWcvcm91dGVzLmpzb24nKTtcbiAgICBleHBlY3QocmVzcCkudG9FcXVhbChbJ2hvbWUnLCAnY29uZmlnJywgJ3JvdXRlcyddKTtcbiAgfSk7XG59KTtcbiJdfQ==

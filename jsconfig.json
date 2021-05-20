@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "configs/*": ["./src/configs/*"],
+      "core-api/*": ["./src/core-api/*"],
+      "database/*": ["./src/database/*"],
+      "error/*": ["./src/error/*"],
+      "loader/*": ["./src/loader/*"],
+      "middlewares/*": ["./src/middlewares/*"],
+      "services/*": ["./src/services/*"],
+      "utils/*": ["./src/utils/*"],
+      "validators/*": ["./src/validators/*"]
+    }
+  },
+  "exclude": ["node_modules", ".jest", "coverage", "dist"]
+}

@@ -1,0 +1,6 @@
+{
+  "bodyParser": {
+    "enabled": true,
+    "options": {}
+  }
+}
