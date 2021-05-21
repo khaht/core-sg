@@ -1,6 +1,6 @@
 {
-  "name": "core-sg",
-  "version": "0.1.0",
+  "name": "core-new-sg",
+  "version": "0.1.1",
   "description": "Social Gear ExpressJS Core",
   "main": "src/index.js",
   "repository": "git@github.com:htk159131721/core-sg.git",
