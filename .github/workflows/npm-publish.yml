@@ -19,38 +19,16 @@ jobs:
         with:
           node-version: 12
       - run: npm install
-      # - run: npm test
 
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://registry.npmjs.org/
       - run: npm install
-      - run: npm version ${{ github.event.release.tag_name }}
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: fa7ee0fc-6b22-4df6-9c88-79118c7e7af9
-          # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-latest
-    # permissions:
-    #   contents: read
-    #   packages: write
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: JS-DevTools/npm-publish@v1
         with:
-          node-version: 12
-          registry-url: https://npm.pkg.github.com/
-      - run: npm install
-      - run: npm version ${{ github.event.release.tag_name }}
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          token: ${{ secrets.NPM_TOKEN }}
