@@ -31,4 +31,4 @@ jobs:
       - run: npm install
       - uses: JS-DevTools/npm-publish@v1
         with:
-          token: ${{ secrets.NPM_TOKEN }}
+          token: "18ab755b-7cd2-45e0-bd2e-877d9f017366"
